@@ -1,14 +1,15 @@
-package movies;
+package org.fundacionjala.movies;
 
 /**
  * Created by JimmyRomero on 8/23/2016.
  */
 public class RegularMovie extends Movie {
-    public RegularMovie(String title, int priceCode) {
-        super(title, priceCode);
+
+    public RegularMovie(String title) {
+        super(title);
     }
 
-    public double determineAmount(int daysRented) {
+    public double calculateAmount(int daysRented) {
         double thisAmount = 2;
         if (daysRented > 2)
             thisAmount += (daysRented - 2) * 1.5;
@@ -16,7 +17,7 @@ public class RegularMovie extends Movie {
         return thisAmount;
     }
 
-    public int determineFrequentRenterPoints(int daysRented) {
+    public int calculateFrequentRenterPoints(int daysRented) {
         return 1;
     }
 }
