@@ -6,6 +6,9 @@ checkstyle {
     toolVersion = "6.1.1"
 }
 apply plugin: 'pmd'
+pmd{
+    sourceSets = [sourceSets.main]
+}
 
 version = '1.0'
 
